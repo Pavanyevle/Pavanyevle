@@ -12,28 +12,35 @@
     
 <body>
 
-    <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $mobile = $_POST['mobile'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+   <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    $to = "pavanyevle6@gmail.com";  // 🔹 यहाँ अपना Email डालो
-    $headers = "From: $email" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               "Content-Type: text/plain; charset=UTF-8";
+ // अगर PHPMailer इंस्टॉल किया है
 
-    $fullMessage = "Name: $name\nEmail: $email\nMobile: $mobile\n\nMessage:\n$message";
+$mail = new PHPMailer(true);
 
-    if (mail($to, $subject, $fullMessage, $headers)) {
-        echo "Message Sent Successfully!";
-    } else {
-        echo "Failed to send email.";
-    }
+try {
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'your-email@gmail.com';  // अपना Gmail
+    $mail->Password = 'your-app-password';    // Gmail App Password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+
+    $mail->setFrom('your-email@gmail.com', 'Pavan Yevle');
+    $mail->addAddress('receiver-email@gmail.com');
+    $mail->Subject = "Test Email via SMTP";
+    $mail->Body = "Hello! This is a test email using SMTP.";
+
+    $mail->send();
+    echo "Email Sent Successfully!";
+} catch (Exception $e) {
+    echo "Email Sending Failed: {$mail->ErrorInfo}";
 }
 ?>
+
 
 
     <!-- *************************Navbar************************* -->
