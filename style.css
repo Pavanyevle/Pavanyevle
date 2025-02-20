@@ -293,17 +293,15 @@ i:hover::after{
     top: 0;
 }
 .home img{
-    background-image: url(p.png);
-       background-color: aqua;
-  
-    height: 25rem;
-    width: 25rem;
+    width: 30vw;
+    height:30vw;
     background: rgba(255,255,255,.1);
     border: .2rem solid rgba(255,255,255,.3);
     border-radius: 50%;
     filter: drop-shadow(0 0 8rem #ff00ee);
+    animation: Scale 1s ease forwards;
     scale: 0;
-
+    animation-delay: 2s;
 }
 @keyframes Scale{
     0%{
@@ -597,16 +595,16 @@ input:nth-child(1){
     transform: translateX(-100px);
 }
 section.start-animation input:nth-child(1){
-    animation:Right 0.5s ease forwards;
-    animation-delay: 0.5s;
+    animation:Right 1s ease forwards;
+    animation-delay: 1.2s;
 }
 input:nth-child(2){
     opacity: 0;
     transform: translateX(100px);
 }
 section.start-animation input:nth-child(2){
-    animation:Left 0.5s ease forwards;
-    animation-delay: 0.5s;
+    animation:Left 1s ease forwards;
+    animation-delay: 1.2s;
 }
  input,textarea{
     width: 100%;
@@ -625,7 +623,7 @@ section.start-animation input:nth-child(2){
 }
 section.start-animation textarea{
     animation:Bottom 1s ease forwards;
-    animation-delay: 0.5s;
+    animation-delay: 1.2s;
 }
 input::placeholder{
     font-size: 1.5rem;
