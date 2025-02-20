@@ -293,8 +293,8 @@ i:hover::after{
     top: 0;
 }
 .home img{
-      height: 40rem;
-    width: 40rem;
+      height: 50rem;
+    width: 50rem;
     background: rgba(255,255,255,.1);
     border: .2rem solid rgba(255,255,255,.3);
     border-radius: 50%;
