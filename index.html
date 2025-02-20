@@ -12,28 +12,6 @@
     
 <body>
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $mobile = $_POST['mobile'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-
-    $to = "your-email@gmail.com";  // 🔹 यहाँ अपना Email डालो
-    $headers = "From: $email" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               "Content-Type: text/plain; charset=UTF-8";
-
-    $fullMessage = "Name: $name\nEmail: $email\nMobile: $mobile\n\nMessage:\n$message";
-
-    if (mail($to, $subject, $fullMessage, $headers)) {
-        echo "Message Sent Successfully!";
-    } else {
-        echo "Failed to send email.";
-    }
-}
-?>
 
 
 
@@ -161,6 +139,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="contact" id="contact">
         <h2 class="title">Contact<span>Me</span></h2>
         <form action="#" id="" >
+            <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    $to = "your-email@gmail.com";  // 🔹 यहाँ अपना Email डालो
+    $headers = "From: $email" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "Content-Type: text/plain; charset=UTF-8";
+
+    $fullMessage = "Name: $name\nEmail: $email\nMobile: $mobile\n\nMessage:\n$message";
+
+    if (mail($to, $subject, $fullMessage, $headers)) {
+        echo "Message Sent Successfully!";
+    } else {
+        echo "Failed to send email.";
+    }
+}
+?>
+
             <div class="input-box">
                 <input type="text" required placeholder="Full Name">
                 <input type="email" required placeholder="Email">
