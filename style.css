@@ -294,6 +294,7 @@ i:hover::after{
 }
 .home img{
     background-image: url(p.png);
+       background-color: aqua;
   
     height: 25rem;
     width: 25rem;
