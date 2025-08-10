@@ -293,15 +293,13 @@ i:hover::after{
     top: 0;
 }
 .home img{
-      height: 20rem;
-    width: 20rem;
+     height: 25rem;
+    width: 25rem;
     background: rgba(255,255,255,.1);
     border: .2rem solid rgba(255,255,255,.3);
     border-radius: 50%;
     filter: drop-shadow(0 0 8rem #ff00ee);
-    animation: Scale 1s ease forwards;
     scale: 0;
-    animation-delay: 2s;
 }
 @keyframes Scale{
     0%{
@@ -755,4 +753,5 @@ footer i{
         width: 100%;
     }
 }
+
 
