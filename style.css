@@ -298,7 +298,6 @@ i:hover::after{
     background: rgba(255,255,255,.1);
     border: .2rem solid rgba(255,255,255,.3);
     border-radius: 50%;
-    filter: drop-shadow(0 0 8rem #ff00ee);
     scale: 0;
 }
 @keyframes Scale{
