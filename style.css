@@ -294,7 +294,7 @@ i:hover::after{
 }
 .home img{
      height: 25rem;
-    width: 25rem;
+    width: 23rem;
     background: rgba(255,255,255,.1);
     border: .2rem solid rgba(255,255,255,.3);
     border-radius: 50%;
@@ -752,5 +752,6 @@ footer i{
         width: 100%;
     }
 }
+
 
 
